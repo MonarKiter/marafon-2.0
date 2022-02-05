@@ -8,6 +8,11 @@ html {
   box-sizing: inherit;
 }
 
+body {
+	padding: 0;
+	margin: 0;
+}
+
 .page {
   height: 100%;
   font-family: var(--font-family, sans-serif);
@@ -31,6 +36,9 @@ a {
   text-decoration: none;
 }
 
+li {
+	list-style-type: none;
+}
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }
@@ -80,8 +88,8 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: var(--container-width);
+  max-width: 1626px;//ширина
+	padding: 0 30px;//отступы от края контейнера
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -104,4 +112,8 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.flex {
+	display: flex;
 }

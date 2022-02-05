@@ -1,22 +1,39 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Free travel</title>
+</head>
+<body>
+	<div class="overlay"></div>
+	<div class="site-container"><!--обрезаем если что то выходит за границы-->
+		<header class="header">
+			<div class="container header__container flex">
+				<ul class="header__social social" >
+					<li class="social__item">
+						<a href="#" class="social__link social__link--fb" aria-label="Go to facebook"></a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link social__link--tw" aria-label="Go to twitter"></a>
+					</li>
+				</ul>
+				<a href="#" class="header__logo logo">Mitraval</a>
+				<button class="header__burger burger btn-reset" aria-label="Open menu">
+					<span class="burger__line"></span>
+					<span class="burger__line"></span>
+				</button>
+			</div>
+		</header>
+		<main class="main">
+			<section class="first">
 
-@include('partials/head.html')
+			</section>
+		</main>
+	</div>
 
-<body class="page__body">
-  <div class="site-container">
-    @include('partials/header.html')
-    <main class="main">
-      <picture>
-        <source srcset="img/cover.avif" type="image/avif">
-        <source srcset="img/cover.webp" type="image/webp">
-        <img loading="lazy" src="img/cover.jpg" class="image" width="300" height="300" alt="Обложка канала MaxGraph">
-      </picture>
-    </main>
-
-    @include('partials/footer.html')
-    <!-- @include('html/h1.html') пример include -->
-  </div>
 </body>
-
 </html>
+

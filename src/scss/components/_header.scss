@@ -1,0 +1,71 @@
+.header {
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+z-index: 100;
+}
+
+.header__container {
+justify-content: space-between;
+padding-top: 40px;
+align-items: center;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	padding: 0;
+}
+
+.social__item:not(:last-child){
+	margin-right: 40px;
+}
+
+.social__link {
+	display: block;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.social__link--fb {
+	width: 11px;
+	height: 20px;
+	background-image: url("../../img/svg/fb.svg");
+}
+
+.social__link--tw {
+	width: 20px;
+	height: 17px;
+	background-image: url("../../img/svg/tw.svg");
+}
+
+.logo {
+font-size: 22px;
+line-height: 26px;
+text-align: center;
+letter-spacing: 2px;
+color: var(--white-color);
+text-transform: uppercase;
+}
+
+.burger {
+	width: 48px;
+	height: 10px;
+	position: relative;
+}
+
+.burger__line {
+	width: 100%;
+	height: 2px;
+	background-color: var(--white-color);
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.burger__line:last-child {
+	top: auto;
+	bottom: 0;
+}
