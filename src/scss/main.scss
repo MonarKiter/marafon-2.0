@@ -5,7 +5,11 @@
 @import "settings";
 
 // подключения компонентов страницы
-@import "./components/header";
+
+@import "./components/_header";
+@import "./components/_first";
+
+
 
 .overlay {
 	position: absolute;
@@ -18,20 +22,11 @@
 	height: 8258px;
 	opacity: .4;
 	z-index: 10;
-  //display: none;
+  display: none;
 }
 .page__body {
   display: flex;
   align-items: center;
   justify-content: center;
   height: var(--vh);
-}
-
-.first {
-	height: 100vh;// на всю высоту экрана
-	min-height: 600px;// не экранов меньше 600px
-	background-image: url("../img/background.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
 }
