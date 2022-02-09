@@ -173,10 +173,19 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 input {
 border: none;
-color: transparent;
-
-
+color: transparent;// убираем  рамку вокруг поля при вводе текста
 &:focus {
     outline: none;
 }
+}
+.section-title {
+	@include SFProDisplayB;
+	font-size: 64px;
+	line-height: 80px;
+	color: var(--dark-color);
+}
+
+.section-title--center {
+	text-align: center;
+	min-width: none;
 }

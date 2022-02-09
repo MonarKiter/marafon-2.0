@@ -1,0 +1,65 @@
+.become {
+	background-color: #fff;
+	margin-top: 151px;
+	&__title {
+		max-width: 50%;// ширина столбца с текстом
+	}
+	&__image {
+		max-height: 100%;
+		object-fit: cover;
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		margin-top: 97px;
+	}
+	&__item {
+		width:  23.5%;// ширина элемента с фото
+		margin-right: 2%;
+		border-radius: 4px;
+		overflow: hidden;
+		position: relative;
+		font-size: 0; // убираем лишнии отступы
+		margin-bottom: 10px;
+	}
+	&__item:nth-child(4n) {
+		margin-right: 0; // у каждого 4 элемента убран отступ с права
+	}
+	&__text {
+		position: absolute;
+		//left: 55px;
+		//bottom: 67px;
+		left: 0;
+		bottom: 0;
+		padding-left: 55px;
+		padding-bottom: 63px;
+		@include SFProDisplayB;
+		font-size: 24px;
+		line-height: 31px;
+		color: var(--white-color);
+		transform: translateY(300px);
+		transition: transform 0.3s ease-in-out;
+	}
+	&__item::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: var(--neptune-color);
+		mix-blend-mode: normal;
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+	}
+	&__item:hover::before {
+		opacity: 0.9;
+		transition: transform 0.3s ease-in-out;
+	}
+	&__item:hover:hover .become__text {
+		transform: translateY(0px);
+		transition: transform 0.3s ease-in-out;
+	}
+}
+

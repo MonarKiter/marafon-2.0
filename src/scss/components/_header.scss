@@ -42,9 +42,10 @@ align-items: center;
 }
 
 .logo {
-@include SFProDisplayH;
+@include SFProDisplayB;
 font-size: 22px;
 line-height: 26px;
+padding-right: 19px;
 text-align: center;
 letter-spacing: 2px;
 color: var(--white-color);

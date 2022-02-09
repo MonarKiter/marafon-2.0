@@ -6,6 +6,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: var(--white-color);
+	padding-top: 104px;
 
 	&__container {
 		position: relative;
@@ -92,5 +93,29 @@
 		right: 60px;
 		top: 43%;
 		transform: rotateY(-50%);
+	}
+	.main-slider {
+		overflow: hidden; //все что внутри обрезаем
+		border-top-left-radius: 8px;// верхний левый угол закругляем
+		border-top-right-radius: 8px;// верхний правый угол закругляем
+		font-size: 0;// убираем между элементами отступ
+		&__text {
+			height: 120px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--neptune-color);
+			@include SFProDisplayH;
+			font-size: 12px;
+			text-transform: uppercase;
+			color: var(--white-color);
+			letter-spacing: 2px;
+		}
+	}
+
+	@media (max-height: 1079px){
+		.first__container{
+			padding: 120px 30px;
+		}
 	}
 }

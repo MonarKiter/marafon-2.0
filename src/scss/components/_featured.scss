@@ -1,0 +1,24 @@
+.featured {
+	display: flex;
+	justify-content: space-between;
+	background-image: url("../img/featured.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 1080px;// на всю высоту экрана 100vh
+	min-height: 600px;// не экранов меньше 600px
+	margin-top: 140px;
+	position: relative;
+	&__stories {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 35.1%;
+		background-color: rgba(17, 31, 42, 0.9);
+
+	}
+	.section-title {
+
+	}
+}
