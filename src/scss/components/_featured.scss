@@ -1,6 +1,4 @@
 .featured {
-	display: flex;
-	justify-content: space-between;
 	background-image: url("../img/featured.jpg");
 	background-size: cover;
 	background-position: center;
@@ -9,6 +7,58 @@
 	min-height: 600px;// не экранов меньше 600px
 	margin-top: 140px;
 	position: relative;
+
+	&__container {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+	.blog-article__category {
+		display: inline-block;
+		@include SFProDisplayH;
+		font-size: 11px;
+		line-height: 13px;
+		text-align: center;
+		letter-spacing: 2px;
+		color: var(--white-color);
+		text-transform: uppercase;
+		padding: 15px 30px;
+		border-radius: 100px;
+		background-color: var(--accent-color);
+		margin-bottom: 18px;
+	}
+	.blog-article__title {
+		@include SFProDisplayB;
+		font-size: 48px;
+		line-height: 64px;
+		color: var(--white-color);
+		margin-bottom: 15px;
+		margin-top: 0;
+		max-width: 40%;
+	}
+	.blog-article__descr {
+		@include SFCompactR;
+		line-height: 21px;
+		font-size: 14px;
+		color: var(--white-color);
+		margin-bottom: 40px;
+		max-width: 40%;
+	}
+	.blog-article__link {
+		display: inline-block;
+		@include SFProDisplayH;
+		font-size: 12px;
+		line-height: 14px;
+		letter-spacing: 2.1px;
+		text-align: center;
+		text-transform: uppercase;
+		color: var(--white-color);
+		padding: 33px 79px;
+		background-color: var(--neptune-color);
+		border-radius: 8px;
+		margin-bottom: 107px;
+	}
 	&__stories {
 		position: absolute;
 		right: 0;
@@ -16,9 +66,56 @@
 		height: 100%;
 		width: 35.1%;
 		background-color: rgba(17, 31, 42, 0.9);
+		padding: 73px 133px;
+		.feature-list {
+			padding-left: 0;
+		}
+		.featured-title {
+			@include SFProDisplayB;
+			font-size: 64px;
+			line-height: 80px;
+			color: var(--white-color);
+			margin-bottom: 63px;
+		}
+
+		.feature-list__article {
+			border-bottom: 1px solid #4d5a5f;//линия снизу
+			display: flex;
+			align-items: flex-start;
+			padding: 31px 0;
+		}
+		.feature-list_item:last-child .feature-list__article {
+			border-bottom: 1px solid transparent;
+		}
+		.feature-list__title a{
+			@include SFProDisplayB;
+			font-size: 18px;
+			line-height: 24px;
+			color: #fff;
+		}
+		.feature-list__title {
+			margin: 0;
+			padding: 0;
+			margin-bottom: 5px;
+		}
+		.feature-list__time {
+			@include SFProText;
+			font-size: 11px;
+			line-height: 13px;
+			color: rgba(255, 255, 255, 0.502293);
+		}
+		.feature-list__text {
+			margin-left: 33px;
+
+		}
 
 	}
-	.section-title {
 
-	}
 }
+
+/*
+
+
+
+
+*/

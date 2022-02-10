@@ -1,0 +1,20 @@
+.swiper {
+	overflow: hidden;
+  width: 100%;
+
+}
+
+.featured-videos__title {
+	padding-top: 95px;
+	margin-bottom: 25px;
+}
+
+.featured-videos__descr {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 634px;
+	@include SFCompactL;
+	font-size: 16px;
+	line-height: 24px;
+	color: #788692;
+}
