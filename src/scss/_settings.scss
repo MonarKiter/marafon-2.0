@@ -76,11 +76,16 @@ img {
 
 a {
   text-decoration: none;
+
 }
 
 p {
 	padding: 0;
 	margin: 0;
+}
+
+ul {
+	padding: 0;
 }
 
 li {
@@ -189,4 +194,8 @@ color: transparent;// убираем  рамку вокруг поля при в
 
 	text-align: center;
 	min-width: none;
+}
+
+h3 {
+	margin: 0;
 }

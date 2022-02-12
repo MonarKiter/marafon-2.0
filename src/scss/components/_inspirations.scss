@@ -1,0 +1,107 @@
+.inspirations {
+	margin-top: 95px;
+	padding-bottom: 125px;
+	.section-title{
+		margin-bottom: 25px;
+	}
+	&__descr {
+		@include SFCompactL;
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		color: #788692;
+		max-width: 635px;
+		margin: 0 auto;
+		padding-bottom: 80px;
+	}
+	.grid {
+		display: grid;
+		padding: 0;
+	}
+	&__list {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 32px;
+		grid-auto-rows: minmax(500px, auto);
+		.insp--1 {
+			background-image: url("../../img/Flex-1.jpg");
+		}
+		.insp--2 {
+			background-image: url("../../img/Flex-2.jpg");
+		}
+		.insp--3 {
+			background-image: url("../../img/Flex-3.jpg");
+		}
+		.insp--4 {
+			background-image: url("../../img/Flex-4.jpg");
+		}
+		.insp--5 {
+			background-image: url("../../img/Flex-5.jpg");
+		}
+		.insp--6 {
+			background-image: url("../../img/Flex-6.jpg");
+		}
+		.insp--7 {
+			background-image: url("../../img/Flex-7.jpg");
+		}
+	}
+	&__item {
+		position: relative;
+		border-radius: 8px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__item::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 65%;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 50%, rgba(0, 0, 0, 0.461617) 100%);
+		border-radius: 8px;
+	}
+
+	&__item--big {
+		grid-column-end: span 2 ;
+	}
+	&__item--big-height {
+		height: 710px;
+	}
+	.insp__text {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 5;
+		padding: 0 38px;
+		.insp__category {
+			//display: inline-block;
+			@include SFProDisplayH;
+			font-size: 10px;
+			letter-spacing: 1.1px;
+			text-transform: uppercase;
+			color: var(--white-color);
+			//margin-bottom: -25px;
+		}
+		.insp__title a{
+			@include SFProDisplayB;
+			font-size: 32px;
+			color: var(--white-color);
+		}
+		.insp__title{
+			margin-top: 9px;
+			padding-bottom: 20px;
+		}
+		.insp__people {
+			display: flex;
+			padding: 0;
+			padding-bottom: 42px;
+		}
+
+		.insp__people-item:not(:first-child) {
+			margin-left: -20px;
+		}
+	}
+
+}
