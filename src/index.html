@@ -11,8 +11,23 @@
 
 </head>
 <body>
-	<div class="overlay"></div>
 	<div class="site-container"><!--обрезаем если что то выходит за границы-->
+		<div class="menu">
+			<button class="menu__close btn-reset" aria-label="close menu">
+				<span class="menu__close-line"></span>
+				<span class="menu__close-line"></span>
+			</button>
+			<nav class="menu__nav">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="#" class="menu__link">Become A Travel</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Featured Stories</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Featured Videos</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Newsletter</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Inspirations</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+				</ul>
+			</nav>
+		</div>
 		<header class="header">
 			<div class="container header__container flex">
 				<ul class="header__social social" >
@@ -46,18 +61,34 @@
 									<button type="submit" class="search-form__button btn-reset" aria-label="Search stories"></button>
 								</form>
 								<div class="first__slider main-slider">
-									<div class="swiper-container">
+									<div class="swiper-con">
+										<button class="first__slider-btn btn-left btn-reset"></button>
+										<button class="first__slider-btn btn-right btn-reset"></button>
 										<div class="swiper-wrapper">
-											<div class="swiper-slider">
+											<div class="swiper-slide">
 												<div class="main-slider__media">
 													<img src="img/Rectangle 2.jpg" alt="mountain" >
 												</div>
 												<p class="main-slider__text">
-													wonderful mountain
+													wonderful mountain 1
 												</p>
 											</div>
-											<div class="swiper-slider"></div>
-											<div class="swiper-slider"></div>
+											<div class="swiper-slide">
+												<div class="main-slider__media">
+													<img src="img/Rectangle 2.jpg" alt="mountain" >
+												</div>
+												<p class="main-slider__text">
+													wonderful mountain 2
+												</p>
+											</div>
+											<div class="swiper-slide">
+												<div class="main-slider__media">
+													<img src="img/Rectangle 2.jpg" alt="mountain" >
+												</div>
+												<p class="main-slider__text">
+													wonderful mountain 3
+												</p>
+											</div>
 										</div>
 									</div>
 
@@ -95,7 +126,7 @@
 						<h3 class="blog-article__title">How To Fly A Private Jet On<br> Your Next Trip</h3>
 						<p class="blog-article__descr">The state of Utah in the United States is home to lots of beautiful National Parks,
 							 & Bryce Canyon<br> National Park ranks as three of the most magnificent & awe inspiring.</p>
-						<a href="#" class="blog-article__link">Read article</a>
+						<a href="#" class="btn btn-rest blog-article__link">Read article</a>
 					</article>
 				</div>
 				<div class="featured__stories">
@@ -162,7 +193,7 @@
 					<p class="featured-videos__descr">The state of Utah in the United States is home to lots of beautiful National Parks, & Bryce
 						<br> Canyon National Park ranks as three of the most magnificent & awe inspiring.</p>
 				</div>
-				<div class="swiper ">
+				<div class="swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide slide-1">
 							<button class="btn-reset slide-play"></button>

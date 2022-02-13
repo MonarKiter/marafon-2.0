@@ -62,18 +62,17 @@
 				display: inline-block;
 				margin-top: 65px;
 				width: 100%;
-				@include SFProDisplayH;
-				font-size: 12px;
-				line-height: 14px;
-				letter-spacing: 2.1px;
-				text-align: center;
-				text-transform: uppercase;
-				color: var(--white-color);
 				padding: 40px 79px;
-				background-color: var(--neptune-color);
 				border-radius: 0 0 8px 8px ;
 				margin-bottom: 107px;
+				transition: background-color 0.3s;
 			}
+
+			.subscribe-form__btn:hover {
+				background-color: var(--neptune-hover-color);
+				transition: background-color 0.3s;
+			}
+
 			}
 	}
 

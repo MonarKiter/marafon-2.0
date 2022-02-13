@@ -42,7 +42,8 @@
 		line-height: 17px;
 		margin-bottom: 57px;
 	}
-	&__btn {
+	.first__btn {
+		position: relative;
 		@include SFProDisplayB;
 		font-size: 12px;
 		line-height: 14px;
@@ -52,7 +53,15 @@
 		padding: 33px 82px ;
 		background-color:  var(--accent-color);
 		border-radius: 8px;
+		transition: background-color 0.3s;
+		z-index: 5;
 	}
+
+	.first__btn:hover {
+		background-color: var(--accent-hover-color);
+		transition: background-color 0.3s;
+	}
+
 	&__bottom {
 		display: flex;
 		position: absolute;
@@ -61,39 +70,41 @@
 		bottom: 0;
 		width: calc(100% - 60px);
 		align-items: flex-end;
+		.search-form {
+			position: relative;
+			flex-shrink: 0;// чтобы элемент не сжимался
+			width: 68%;
+			overflow: hidden;
+			border-top-left-radius: 4px;
+			border-bottom: 1px solid #d9d9d9;
+			height: 120px;
+		}
+		.search-form__field {
+			border: none;
+			background-color: #ffffff;
+			width: 100%;
+			height: 100%;
+			color: var(--dark-color);
+			padding-left: 55px;
+			@include SFProDisplayB;
+			font-size: 16px;
+			line-height: 19px;
+			padding-right: 90px;
+		}
+		.search-form__button {
+			width: 20px;
+			height: 20px;
+			background-image: url("../img/search.svg");
+			background-position: center ;
+			background-size: cover;
+			background-repeat: no-repeat;
+			position: absolute;
+			right: 60px;
+			top: 43%;
+			transform: rotateY(-50%);
+		}
 	}
-	.search-form {
-		position: relative;
-		flex-shrink: 0;// чтобы элемент не сжимался
-		width: 68%;
-		overflow: hidden;
-		border-top-left-radius: 4px;
-		height: 120px;
-	}
-	.search-form__field {
-		border: none;
-		background-color: #ffffff;
-		width: 100%;
-		height: 100%;
-		color: var(--dark-color);
-		padding-left: 55px;
-		@include SFProDisplayB;
-		font-size: 16px;
-		line-height: 19px;
-		padding-right: 90px;
-	}
-	.search-form__button {
-		width: 20px;
-		height: 20px;
-		background-image: url("../img/search.svg");
-		background-position: center ;
-		background-size: cover;
-		background-repeat: no-repeat;
-		position: absolute;
-		right: 60px;
-		top: 43%;
-		transform: rotateY(-50%);
-	}
+
 	.main-slider {
 		overflow: hidden; //все что внутри обрезаем
 		border-top-left-radius: 8px;// верхний левый угол закругляем
@@ -111,6 +122,31 @@
 			color: var(--white-color);
 			letter-spacing: 2px;
 		}
+	}
+
+	.first__slider {
+		position: relative;
+	}
+	.first__slider-btn {
+		position: absolute;
+		left: 50px;
+		bottom: 55px;
+		width: 14px;
+		height: 14px;
+		z-index: 50;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.btn-right {
+		left: auto;
+		right: 50px;
+		background-image: url("../../img/arrow-right.svg");
+	}
+
+	.btn-left {
+		background-image: url("../../img/arrow-left.svg");
 	}
 
 	@media (max-height: 1079px){

@@ -2,7 +2,7 @@
 	overflow: hidden;
   width: 100%;
 }
-.swiper-slide {
+.swiper .swiper-slide {
 	position: relative;
 	background-color: #e3e3e3;
 	border-radius: 8px;
@@ -19,7 +19,7 @@
 	overflow: hidden;
 }
 
-.swiper-slide::after {
+.swiper .swiper-slide::after {
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -31,7 +31,7 @@
 	transition: opacity 0.5s;
 }
 
-.swiper-slide-active {
+.swiper .swiper-slide-active {
 	transition: .5s;
 	transform: scaleY(1);
 }
@@ -80,6 +80,7 @@
 	position: relative;
 	z-index: 5;
 	padding-left: 40px;
+	padding-bottom:30px ;
 	transition: transform 0.5s;
 	transform: translateY(200px);
 }
@@ -99,5 +100,4 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-
 }

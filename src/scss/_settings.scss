@@ -76,7 +76,7 @@ img {
 
 a {
   text-decoration: none;
-
+	color: #000;
 }
 
 p {
@@ -104,6 +104,19 @@ li {
   padding: 0;
   background: transparent;
   cursor: pointer;
+}
+
+.btn {
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 2.1px;
+	background-color: var(--neptune-color);
+	border-radius: 8px;
+	@include SFProDisplayH;
+	text-transform: uppercase;
+	background-color: var(--neptune-color);
+	text-align: center;
+	color: var(--white-color);
 }
 
 .list-reset {
