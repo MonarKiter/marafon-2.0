@@ -12,7 +12,8 @@ const swiper1 = document.querySelector('.swiper'),
 			swiper2 = document.querySelector('.swiper-con'),
 			burger = document.querySelector('.burger'),
 			close = document.querySelector('.menu__close'),
-			menu = document.querySelector('.menu');
+			menu = document.querySelector('.menu'),
+			playButtonsFirst = document.querySelectorAll('.main-slider__play');
 
 const swiperSlider1 = new Swiper(swiper1, {
 	// Optional parameters
@@ -37,6 +38,16 @@ const swiperSlider2 = new Swiper(swiper2, {
   },
 });
 
+swiperSlider2.on('transitionEnd', function () {
+	let videos = document.querySelectorAll('.first__slider video');
+	videos.forEach((el) => {
+		el.pause();                     //пауза видео после перелистывания
+		el.currentTime = 0;             // после паузы возвращаем видео на начало
+	});
+	playButtonsFirst.forEach((el) => {
+		el.style.display = 'block';     //после паузы возвращаем кнопку play
+	});
+});
 
 burger.addEventListener('click', () => {
 	menu.classList.add('menu--visible');
@@ -44,4 +55,12 @@ burger.addEventListener('click', () => {
 
 close.addEventListener('click', () => {
 	menu.classList.remove('menu--visible');
+});
+
+playButtonsFirst.forEach((el) => {
+	el.addEventListener('click', (e) => {
+		let video = e.currentTarget.closest('.main-slider__media').querySelector('video');
+		video.play();                            // включает видео после нажатия кнопки
+		e.currentTarget.style.display = 'none'; // после нажатия кнопка пропадает
+	});
 });

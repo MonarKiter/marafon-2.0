@@ -1,5 +1,5 @@
 .first {
-	height: 1080px;// на всю высоту экрана 100vh
+	height: 1080px;// на всю высоту экрана 100vh/ height: 1080px
 	min-height: 600px;// не экранов меньше 600px
 	background-image: url("../img/background.jpg");
 	background-position: center;
@@ -111,7 +111,7 @@
 		border-top-right-radius: 8px;// верхний правый угол закругляем
 		font-size: 0;// убираем между элементами отступ
 		&__text {
-			height: 120px;
+			height: 125px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -121,6 +121,7 @@
 			text-transform: uppercase;
 			color: var(--white-color);
 			letter-spacing: 2px;
+
 		}
 	}
 
@@ -149,9 +150,29 @@
 		background-image: url("../../img/arrow-left.svg");
 	}
 
-	@media (max-height: 1079px){
-		.first__container{
-			padding: 120px 30px;
-		}
+	.main-slider__media{
+		max-height: 275px;
+
+	}
+
+	.main-slider__play {
+		position: absolute;
+		left: 50%;
+		top: 40%;
+		transform: translate(-50%,-50%);
+		width: 32px;
+		height: 41px;
+		background-image: url("../../img/play.svg");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: 100;
+	}
+
+}
+
+@media (max-height: 1079px){
+	.first__container{
+		padding: 120px 30px;
 	}
 }
