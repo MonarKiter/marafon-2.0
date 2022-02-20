@@ -1,5 +1,5 @@
 .first {
-	height: 1080px;// на всю высоту экрана 100vh/ height: 1080px
+	height: 116vh;//height: 1080px;// на всю высоту экрана 100vh/ height: 1080px
 	min-height: 600px;// не экранов меньше 600px
 	background-image: url("../img/background.jpg");
 	background-position: center;
@@ -89,6 +89,7 @@
 			@include SFProDisplayB;
 			font-size: 16px;
 			line-height: 19px;
+			padding-left: 55px;
 			padding-right: 90px;
 		}
 		.search-form__button {
@@ -110,8 +111,11 @@
 		border-top-left-radius: 8px;// верхний левый угол закругляем
 		border-top-right-radius: 8px;// верхний правый угол закругляем
 		font-size: 0;// убираем между элементами отступ
-		&__text {
-			height: 125px;
+		line-height: 1;
+
+
+		.main-slider__text {
+			height: 120px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -121,17 +125,20 @@
 			text-transform: uppercase;
 			color: var(--white-color);
 			letter-spacing: 2px;
-
+			max-width: 490px;
+			text-align: center;
+			line-height: 1;
 		}
 	}
 
-	.first__slider {
+	 .first__slider {
 		position: relative;
 	}
+
 	.first__slider-btn {
 		position: absolute;
 		left: 50px;
-		bottom: 55px;
+		bottom: 53px;
 		width: 14px;
 		height: 14px;
 		z-index: 50;
@@ -150,9 +157,12 @@
 		background-image: url("../../img/arrow-left.svg");
 	}
 
+	.main-slider__media video{
+		max-height: 275px;
+	}
+
 	.main-slider__media{
 		max-height: 275px;
-
 	}
 
 	.main-slider__play {
@@ -169,10 +179,52 @@
 		z-index: 100;
 	}
 
+
+
 }
 
 @media (max-height: 1079px){
 	.first__container{
 		padding: 120px 30px;
+	}
+}
+
+@media (max-height: 880px) {
+	.first__container {
+		padding: 100px 30px;
+	}
+
+	.first__link {
+		margin-bottom: 30px;
+	}
+
+	.first__title {
+		font-size: 75px;
+		line-height: 65px;
+	}
+}
+
+@media (max-height: 780px) {
+	.search-form {
+		height: 80px;
+	}
+
+	.main-slider__text {
+		height: 80px;
+	}
+
+	.first__title {
+		font-size: 60px;
+		line-height: 65px;
+		margin-bottom: 20px;
+	}
+
+	.first__descr {
+		font-size: 12px;
+		margin-bottom: 30px;
+	}
+
+	.first__btn {
+		padding: 25px 40px;
 	}
 }
